@@ -12,7 +12,7 @@ curl -X POST http://localhost:8081/api/products \
 # 2. Créer une commande
 curl -X POST http://localhost:8082/api/commandes \
   -H "Content-Type: application/json" \
-  -d '{"id":1,"date":"2026-06-17","productId":1,"statut":true}'
+  -d '{"id":1,"date":"2026-06-17","productId":1,"statut":EN_COURS}'
 
 # 4. verifier le Stock
 curl -X GET http://localhost:8081/api/products
@@ -74,6 +74,10 @@ Exemple dans pom.xml on a :
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 ### 5. Ce qui se passe quand un service produit tombe en panne est : 
+
+Quand le service produit tombe en panne alors les appels du service commande vers produit échouent  et annulent les transactions JPA.
+
+
 
 
 
