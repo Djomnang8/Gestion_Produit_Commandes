@@ -11,7 +11,7 @@ public class Commande {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long productId;
-    private Double quantite;
+    private int quantite;
     private LocalDate date;
     @Enumerated(EnumType.STRING)
     private Statut statut;
@@ -22,8 +22,8 @@ public class Commande {
     public Long getProductId() { return productId; }
     public void setProductId(Long productId) { this.productId = productId; }
 
-    public Double getQuantite() { return quantite; }
-    public void setQuantite(Double quantite) { this.quantite = quantite; }
+    public int getQuantite() { return quantite; }
+    public void setQuantite(int quantite) { this.quantite = quantite; }
 
     public LocalDate getDate() { return date; }
     public void setDate(LocalDate date) { this.date = date; }

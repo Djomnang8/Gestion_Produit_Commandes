@@ -61,8 +61,7 @@ De plus on a aussi la complexite dans la gestion des données car comme chaque s
 
 
 ### 3. Raison de l'utilisation de stripPrefix=1 dans le Gateway  :
-
-
+StripPrefix=1 supprime le premier segment du chemin (/api) avant de transmettre la requête au microservice cible. Ainsi, une requête entrante sur /api/products/1 est redirigée vers produit-service à /products/1. Cela permet au Gateway de centraliser le préfixage des routes sans impacter les endpoints internes des microservices.
 
 ### 4. Definition de l'autoconfiguration de SpringBoot + 1 exemple dans notre projet :
 L'autoconfiguration de Spring Boot : est un mécanisme qui permet de configurer automatiquement l'application Spring en fonction des dépendances presentes.
